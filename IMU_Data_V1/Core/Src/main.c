@@ -66,7 +66,7 @@ float Error,
 	  prevError;
 
 
-float default_Angle = 0; // ye hamesha ni kar sakte ,  may be jab drone mudega it will create some probs
+float default_Angle = 0;
 
 int      Time      ,
 		 prev_Time ,
@@ -234,11 +234,9 @@ int main(void)
 	  prev_Time = Time;
 	  Time = micros();
 
-	  Time_spent = (Time - prev_Time)*10e-06; // microSeconds h ye may be kaam na kare ya system more unstable ho jye
+	  Time_spent = (Time - prev_Time)*10e-06; /
 
-
-
-	  Error = MPU6050.Gx - default_Angle;  // ye sirf aik axis ka angle h( can be combined with 2 axis using some trigno)
+	  Error = MPU6050.Gx - default_Angle;  
 
 
 
